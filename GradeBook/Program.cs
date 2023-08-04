@@ -11,25 +11,6 @@ double randomGrade = RandomNumberGenerator.GenerateRandomNumber(0.0, 100.0);
 char letterGrade = LetterGradeConversion();
 Console.WriteLine(name + "'s current grade is at " + letterGrade + " with a " + randomGrade + "%");
 
-/*if(randomGrade > 89.99)
-{
-    letterGrade = "A";
-}else if(randomGrade >= 80 &&  randomGrade < 90)
-{
-    letterGrade = "B";
-}else if(randomGrade >= 70 && randomGrade < 80)
-{
-    letterGrade = "C";
-}else if(randomGrade >= 60 && randomGrade < 70)
-{
-    letterGrade = "D";
-}else if(randomGrade < 60){
-    letterGrade = "F";
-}
-else
-{
-    Console.WriteLine("BAsiC has failed you!");
-}*/
 
 public class RandomNumberGenerator
 {
@@ -44,6 +25,29 @@ public class RandomNumberGenerator
 
 public class LetterGradeConversion
 {
-
+   /*if (randomGrade > 89.99)
+{
+    letterGrade = "A";
+}
+else if (randomGrade >= 80 && randomGrade < 90)
+{
+    letterGrade = "B";
+}
+else if (randomGrade >= 70 && randomGrade < 80)
+{
+    letterGrade = "C";
+}
+else if (randomGrade >= 60 && randomGrade < 70)
+{
+    letterGrade = "D";
+}
+else if (randomGrade < 60)
+{
+    letterGrade = "F";
+}
+else
+{
+    Console.WriteLine("BAsiC has failed you!");
+}*/
 }
 
