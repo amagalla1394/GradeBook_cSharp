@@ -5,35 +5,34 @@ using System.Security.Cryptography;
 Console.WriteLine("Welcome to GradeBook BAsiC.\n");
 Console.WriteLine("To begin, enter the student's name:\n");
 var name = Console.ReadLine();
+var letterGrade = "";
 
 //assign random grade to student
 double randomGrade = RandomNumberGenerator.GenerateRandomNumber(0.0, 100.0);
-Console.WriteLine(name + "'s current grade is at " /*+ Letter + " with a "*/ + randomGrade + "%");
+Console.WriteLine(name + "'s current grade is at " + letterGrade + " with a " + randomGrade + "%");
 
 
-/*void letter(string letterGrade)
+
+if(randomGrade > 89.99)
 {
-    if (randomGrade >= 90 && randomGrade <= 100)
-    {
-        letterGrade = "A";
-    }
-    else if (randomGrade >= 80 && randomGrade < 90)
-    {
+    letterGrade = "A";
+}else if(randomGrade >= 80 &&  randomGrade < 90)
+{
+    letterGrade = "B";
+}else if(randomGrade >= 70 && randomGrade < 80)
+{
+    letterGrade = "C";
+}else if(randomGrade >= 60 && randomGrade < 70)
+{
+    letterGrade = "D";
+}else if(randomGrade < 60){
+    letterGrade = "F";
+}
+else
+{
+    Console.WriteLine("BAsiC has failed you!");
+}
 
-    }
-    else if (randomGrade >= 70 && randomGrade < 80)
-    {
-
-    }
-    else if (randomGrade >= 60 && randomGrade < 70)
-    {
-
-    }
-    else
-    {
-
-    }
-}*/
 
 public class RandomNumberGenerator
 {
