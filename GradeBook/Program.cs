@@ -12,7 +12,7 @@ public class GradeBook
         //assign random grade to student
         double randomGrade = RandomNumberGenerator.GenerateRandomNumber(0.0, 100.0);
         string letterGrade = LetterGradeConversion(randomGrade);
-        Console.WriteLine(name + "'s current grade is at " + letterGrade + " with a " + randomGrade + "%");
+        Console.WriteLine(name + "'s current grade is a(n) " + letterGrade + " with a " + randomGrade + "%");
 
     }
 
