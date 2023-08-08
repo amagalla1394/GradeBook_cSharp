@@ -1,15 +1,45 @@
 ﻿using System;
 using System.Security.Cryptography;
 
+public class GradeBook
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Welcome to GradeBook BAsiC.\n");
+        Console.WriteLine("To begin, enter the student's name:\n");
+        var name = Console.ReadLine();
 
-Console.WriteLine("Welcome to GradeBook BAsiC.\n");
-Console.WriteLine("To begin, enter the student's name:\n");
-var name = Console.ReadLine();
+        //assign random grade to student
+        double randomGrade = RandomNumberGenerator.GenerateRandomNumber(0.0, 100.0);
+        string letterGrade = LetterGradeConversion(randomGrade);
+        Console.WriteLine(name + "'s current grade is at " + letterGrade + " with a " + randomGrade + "%");
 
-//assign random grade to student
-double randomGrade = RandomNumberGenerator.GenerateRandomNumber(0.0, 100.0);
-char letterGrade = LetterGradeConversion();
-Console.WriteLine(name + "'s current grade is at " + letterGrade + " with a " + randomGrade + "%");
+    }
+
+    public static string LetterGradeConversion(double numericGrade)
+    {
+        if (numericGrade >= 90.0)
+        {
+            return "A";
+        }
+        else if (numericGrade >= 80.0)
+        {
+            return "B";
+        }
+        else if (numericGrade >= 70.0)
+        {
+            return "C";
+        }
+        else if (numericGrade >= 60.0)
+        {
+            return "D";
+        }
+        else
+        {
+            return "F";
+        }
+    }
+}
 
 
 public class RandomNumberGenerator
@@ -22,32 +52,3 @@ public class RandomNumberGenerator
         return Math.Round(randomValue, 2);
     }   
 }
-
-public class LetterGradeConversion
-{
-   /*if (randomGrade > 89.99)
-{
-    letterGrade = "A";
-}
-else if (randomGrade >= 80 && randomGrade < 90)
-{
-    letterGrade = "B";
-}
-else if (randomGrade >= 70 && randomGrade < 80)
-{
-    letterGrade = "C";
-}
-else if (randomGrade >= 60 && randomGrade < 70)
-{
-    letterGrade = "D";
-}
-else if (randomGrade < 60)
-{
-    letterGrade = "F";
-}
-else
-{
-    Console.WriteLine("BAsiC has failed you!");
-}*/
-}
-
