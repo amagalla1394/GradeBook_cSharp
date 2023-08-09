@@ -1,5 +1,5 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿//using System;
+//using System.Security.Cryptography;
 
 public class GradeBook
 {
@@ -13,7 +13,6 @@ public class GradeBook
         double randomGrade = RandomNumberGenerator.GenerateRandomNumber(0.0, 100.0);
         string letterGrade = LetterGradeConversion(randomGrade);
         Console.WriteLine(name + "'s current grade is a(n) " + letterGrade + " with a " + randomGrade + "%");
-
     }
 
     public static string LetterGradeConversion(double numericGrade)
@@ -40,7 +39,6 @@ public class GradeBook
         }
     }
 }
-
 
 public class RandomNumberGenerator
 {
