@@ -1,6 +1,4 @@
-﻿//using System;
-//using System.Security.Cryptography;
-
+﻿
 public class GradeBook
 {
     static void Main(string[] args)
