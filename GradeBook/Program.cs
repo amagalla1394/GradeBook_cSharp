@@ -48,3 +48,5 @@ public class RandomNumberGenerator
         return Math.Round(randomValue, 2);
     }   
 }
+
+//add a probability method for higher passing percentages.
